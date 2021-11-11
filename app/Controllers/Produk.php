@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\ProductModel;
 
 class Produk extends BaseController
 {
     public function index()
     {
-        return view('product_page');
+        $product=  new ProductModel();
+        echo $product->getData();
+        // return view('product_page');\
+
     }
 
     public function display()
